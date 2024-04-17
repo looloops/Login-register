@@ -1,4 +1,6 @@
-<?php include __DIR__ . '/init.php';
+<?php
+// if ($user_from_db)
+//   header('Location: /FULL%20STACK%20EPICODE/U1/W1%20-%20PHP%201/W1-D5%20wp-php1/')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,8 +38,11 @@
 
         </ul>
         <div class="nav-item">
+          <!-- <?php if ($user_from_db) { ?>
+            <span><?= $user_from_db["username"] ?></span><?php } ?> -->
 
           <a class="nav-link" href="/FULL%20STACK%20EPICODE/U1/W1%20-%20PHP%201/W1-D5%20wp-php1/login.php">Login</a>
+
           <a class="nav-link"
             href="/FULL%20STACK%20EPICODE/U1/W1%20-%20PHP%201/W1-D5%20wp-php1/register.php">Register</a>
 

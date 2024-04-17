@@ -1,6 +1,11 @@
 <?php
 include_once __DIR__ . '/includes/init.php';
 
+if ($user_from_db) {
+    header('Location: /FULL%20STACK%20EPICODE/U1/W1%20-%20PHP%201/W1-D5%20wp-php1/');
+}
+;
+
 
 $user = [];
 $user['username'] = $_POST['username'] ?? '';
@@ -20,7 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute([
         'username' => $_POST['username'],
         'email' => $_POST['email'],
-        'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
+        'password' => $_POST['password'],
+        PASSWORD_DEFAULT,
     ]);
 
     header('Location: /FULL%20STACK%20EPICODE/U1/W1%20-%20PHP%201/W1-D5%20wp-php1/login.php');

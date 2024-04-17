@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . '/includes/initial.php';
+include_once __DIR__ . '/includes/init.php';
 
 $user = [];
 $user['username'] = $_POST['username'] ?? '';
